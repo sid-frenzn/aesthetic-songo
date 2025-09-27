@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Song App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff7eb3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff4a95;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 id="song">Click below for an aesthetic song 🎶</h2>
+    <button onclick="newSong()">Suggest Song</button>
+  </div>
+
+  <script>
+    const songs = [
+      "Happier Than Ever - Billie Eilish",
+      "Night Changes - One Direction",
+      "Until I Found You - Stephen Sanchez",
+      "A Thousand Years - Christina Perri",
+      "Perfect - Ed Sheeran"
+    ];
+
+    function newSong() {
+      const random = songs[Math.floor(Math.random() * songs.length)];
+      document.getElementById("song").innerText = random;
+    }
+  </script>
+</body>
+</html>
